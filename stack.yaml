@@ -1,0 +1,26 @@
+resolver: lts-13.7
+
+packages:
+  - aws/
+  - aws-dynamodb/
+  - aws-s3/
+  - aws-secretsmanager/
+  - aws-sns/
+  - aws-sqs/
+  - location:
+      git: git@github.com:tmortiboy/text1.git
+      commit: fcc627e6d37726890cd73cfb5eeb9b75fe4e0d84
+    extra-dep: true
+  - location:
+      git: git@github.com:tmortiboy/network-address.git
+      commit: 5fa8dfaf6e340b2cb8e323ba20b27c4a2482f59c
+    extra-dep: true
+  - location:
+      git: git@github.com:tmortiboy/generic-arbitrary.git
+      commit: bcd824ed50cac23e6f89972d6500a8e5638f5972
+    extra-dep: true
+
+extra-deps:
+  - positive-0.4.1@sha256:c280a62556dac7f0de151da8c4e72cdb785803f1fe98dae9e9d1e1a39cd163a7
+  - QuickCheck-2.14
+  - splitmix-0.0.4

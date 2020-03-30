@@ -1,0 +1,36 @@
+name:                aws-extra
+version:             1.0.0.0
+synopsis:            AWS abstractions
+description:         Please see README.md
+homepage:            https://github.com/seek-oss/amazonka-extra#readme
+author:              Tom Mortiboy
+maintainer:          Tom Mortiboy
+copyright:           2020 seek-oss
+category:            Data, AWS
+build-type:          Simple
+cabal-version:       >=1.10
+
+flag test-integration
+  default: False
+  manual: True
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Control.Monad.Trans.AWS.Extra
+  ghc-options:         -Wall
+  build-depends:       base >= 4.7 && < 5
+                     , amazonka
+                     , mtl
+                     , primitive
+  default-language:    Haskell2010
+  default-extensions:  FlexibleContexts
+                     , LambdaCase
+                     , MultiParamTypeClasses
+                     , OverloadedStrings
+                     , RecordWildCards
+                     , ScopedTypeVariables
+                     , TupleSections
+
+source-repository head
+  type:     git
+  location: https://github.com/seek-oss/amazonka-extra
